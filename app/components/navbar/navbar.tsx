@@ -120,7 +120,7 @@ const Navbar = () => {
           </ul>
         </nav>
       </Headroom>
-      <AnimatePresence>
+      {/* <AnimatePresence> */}
         {menu && (
           <motion.div
             initial={{ opacity: 0 }}
@@ -192,7 +192,7 @@ const Navbar = () => {
             </ul>
           </motion.div>
         )}
-      </AnimatePresence>
+      {/* </AnimatePresence> */}
     </>
   );
 };

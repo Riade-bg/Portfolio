@@ -32,19 +32,19 @@ interface Data {
 }
 
 const Work = async () => {
-  const ref = useRef<HTMLDivElement>(null);
+  // const ref = useRef<HTMLDivElement>(null);
 
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["0 1", "0 0"]
-  });
+  // const { scrollYProgress } = useScroll({
+  //   target: ref,
+  //   offset: ["0 1", "0 0"]
+  // });
   const data: Data[] = await getProjects();
   return (
-    <motion.div
+    <div
       id="work"
       className="px-5 md:px-36 mt-20 pt-20"
-      ref={ref}
-      style={{ opacity: scrollYProgress }}
+      // ref={ref}
+      // style={{ opacity: scrollYProgress }}
     >
       <h1
         className="flex items-end md:text-start
@@ -125,7 +125,7 @@ const Work = async () => {
       </div>
     </div>
       ))}
-    </motion.div>
+    </div>
   );
 };
 

@@ -5,7 +5,7 @@ import Header from "./components/header/header";
 import Navbar from "./components/navbar/navbar";
 import About from "./components/about/about";
 import React from "react"
-// import Work from "./components/portfolio/page";
+import Work from "./components/portfolio/work";
 import Contact from "./components/contact/contact";
 
 export default function Home() {
@@ -19,7 +19,7 @@ export default function Home() {
         <Navbar />
         <Header />
         <About />
-        {/* <Work /> */}
+        <Work />
         <Contact />
       </motion.div>
     </AnimatePresence>

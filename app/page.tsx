@@ -8,6 +8,8 @@ import React from "react"
 import Work from "./components/portfolio/work";
 import Contact from "./components/contact/contact";
 
+export const dynamic = 'force-dynamic'
+
 export default function Home() {
   return (
       <>

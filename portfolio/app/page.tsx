@@ -10,18 +10,12 @@ import Contact from "./components/contact/contact";
 
 export default function Home() {
   return (
-    <AnimatePresence>
-      <motion.div
-        initial={{ opacity: 0, y: 15 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: 15 }}
-      >
+      <>
         <Navbar />
         <Header />
         <About />
         <Work />
         <Contact />
-      </motion.div>
-    </AnimatePresence>
+      </>
   );
 }

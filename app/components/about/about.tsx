@@ -8,18 +8,18 @@ import { useRef } from "react";
 import React from "react"
 
 const About = () => {
-  const ref = useRef<HTMLDivElement>(null);
+  // const ref = useRef<HTMLDivElement>(null);
 
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["0 1", "0 0"]
-  });
+  // const { scrollYProgress } = useScroll({
+  //   target: ref,
+  //   offset: ["0 1", "0 0"]
+  // });
 
   return (
-    <motion.div
+    <div
       id="about"
-      ref={ref}
-      style={{ opacity: scrollYProgress }}
+      // ref={ref}
+      // style={{ opacity: scrollYProgress }}
       className="w-full flex flex-col md:flex-row justify-center items-center md:px-10 pt-20"
     >
       <div className="w-full md:w-[550px] p-10 light:text-[#0a192f]">
@@ -79,7 +79,7 @@ const About = () => {
           alt="Picture of the author"
         />
       </div>
-    </motion.div>
+    </div>
   );
 };
 

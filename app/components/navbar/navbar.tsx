@@ -200,10 +200,7 @@
 // export default Navbar;
 
 import React from "react"
-import Headroom from "react-headroom";
-
 import { Fragment, useState } from 'react'
-import { useRouter } from "next/navigation";
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
@@ -220,12 +217,11 @@ function classNames(...classes) {
 export default function Navbar() {
   const [darkMode, setDarkMode] = useState(true);
   // const { setTheme } = useTheme();
-  const router = useRouter()
   return (
-    <Disclosure as="nav" className="bg-gray-800 z-50">
+    <Disclosure as="nav" className="bg-gray-800">
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 font-mono">
+          <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
@@ -241,21 +237,22 @@ export default function Navbar() {
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
-                <h1
-                    onClick={() => router.push("/")}
-                    className="px-3 py-1 transition hover:text-blue-500 
-                          text-lg font-bold cursor-pointer"
-                  >
-                    R
-                  </h1>
+                  <img
+                    className="h-8 w-auto"
+                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                    alt="Your Company"
+                  />
                 </div>
-                <div className="hidden sm:ml-6 sm:block w-full">
-                  <div className="flex justify-end space-x-4">
+                <div className="hidden sm:ml-6 sm:block">
+                  <div className="flex space-x-4">
                     {navigation.map((item) => (
                       <a
                         key={item.name}
                         href={item.href}
-                        className={"text-white hover:text-blue-600 px-5 transition-all py-2 text-sm font-medium"}
+                        className={classNames(
+                          item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                          'rounded-md px-3 py-2 text-sm font-medium'
+                        )}
                         aria-current={item.current ? 'page' : undefined}
                       >
                         {item.name}
@@ -268,7 +265,7 @@ export default function Navbar() {
           </div>
 
           <Disclosure.Panel className="sm:hidden">
-            <div className="space-y-1 px-2 pb-3 pt-2 font-mono">
+            <div className="space-y-1 px-2 pb-3 pt-2">
               {navigation.map((item) => (
                 <Disclosure.Button
                   key={item.name}

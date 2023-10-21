@@ -154,6 +154,7 @@ const Navbar = () => {
                 }
               ].map((item, index) => (
                 <Link
+                  key={item.id}
                   activeClass={"text-blue-500"}
                   to={item.id}
                   spy={true}

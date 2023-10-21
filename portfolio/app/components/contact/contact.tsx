@@ -18,7 +18,7 @@ const Contact = () => {
       </p>
       <h1 className="text-5xl font-fira">Contact</h1>
       <p className="text-center md:w-1/2 my-10">
-        Thanks for taking time to go through my Portfolio. If you wan't to
+        Thanks for taking time to go through my Portfolio. If you wan&apos;t to
         cantact me, I will do my best to reply as soon as possible. Thank you!
       </p>
       <Link href="mailto:riadeboughaba@gmail.com">

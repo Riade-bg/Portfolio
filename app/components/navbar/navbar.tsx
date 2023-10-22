@@ -82,7 +82,7 @@ const Navbar = () => {
                 </Button>
               </a>
             </li>
-            {/* <li>
+            <li>
               <div className="bg-red-100 flex items-center ml-3">
                 {darkMode && (
                   <Button
@@ -110,7 +110,7 @@ const Navbar = () => {
                   </Button>
                 )}
               </div>
-            </li> */}
+            </li>
             <li
               className="md:hidden p-2 cursor-pointer ml-2"
               onClick={() => setMenu(true)}
@@ -120,7 +120,7 @@ const Navbar = () => {
           </ul>
         </nav>
       </Headroom>
-      {/* <AnimatePresence> */}
+      <AnimatePresence>
         {menu && (
           <motion.div
             initial={{ opacity: 0 }}

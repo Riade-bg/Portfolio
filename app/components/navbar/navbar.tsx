@@ -22,8 +22,8 @@ const Navbar = () => {
   return (
     <>
       <Headroom>
-        <nav className="z-10 w-full top-0 flex flex-1 justify-between items-center px-10 md:px-24 py-5 backdrop-blur">
-          <div className="border-blue-500 transition-ll border-2">
+        <nav className="z-10 w-full top-0 flex flex-col md:flex-row flex-1 justify-between items-center px-10 md:px-24 py-5 backdrop-blur">
+          <div className="border-blue-500 transition-all border-2">
             <h1
               onClick={() => router.push("/")}
               className="px-3 py-1 transition hover:text-blue-500 
@@ -52,23 +52,18 @@ const Navbar = () => {
             ].map((item, index) => (
               <li
                 key={index}
-                className="cursor-pointer hover:text-blue-500 mr-10 capitalize hidden md:flex items-center transition-all"
+                className="cursor-pointer hover:text-blue-500 py-5 md:py-0 mx-10 capitalize flex items-center transition-all"
               >
-                <Link
-                  activeClass={"text-blue-500"}
-                  to={item.id}
-                  spy={true}
-                  offset={50}
-                  smooth={true}
-                  duration={500}
+                <a
+                  href={"#" + item.id}
                   className="flex"
                 >
                   <span className="text-blue-500 mr-1">{item.index}</span>
                   <p>{item.link}</p>
-                </Link>
+                </a>
               </li>
             ))}
-            <li>
+            {/* <li>
               <a href="/Lebenslauf..pdf" target="_blank" rel="noreferrer">
                 <Button
                   variant={"outline"}
@@ -81,9 +76,9 @@ const Navbar = () => {
                   </span>
                 </Button>
               </a>
-            </li>
+            </li> */}
             <li>
-              <div className="bg-red-100 flex items-center ml-3">
+              {/* <div className="bg-red-100 flex items-center ml-3">
                 {darkMode && (
                   <Button
                     variant="secondary"
@@ -109,18 +104,18 @@ const Navbar = () => {
                     <MdOutlineDarkMode className="absolute h-[1.2rem] w-[1.2rem] transition-all" />
                   </Button>
                 )}
-              </div>
+              </div> */}
             </li>
-            <li
+            {/* <li
               className="md:hidden p-2 cursor-pointer ml-2"
               onClick={() => setMenu(true)}
             >
               <HiMenu className="light:text-black" size={30} />
-            </li>
+            </li> */}
           </ul>
         </nav>
       </Headroom>
-      <AnimatePresence>
+      {/* <AnimatePresence>
         {menu && (
           <motion.div
             initial={{ opacity: 0 }}
@@ -192,7 +187,7 @@ const Navbar = () => {
             </ul>
           </motion.div>
         )}
-      </AnimatePresence>
+      </AnimatePresence> */}
     </>
   );
 };

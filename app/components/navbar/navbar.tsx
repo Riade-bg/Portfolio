@@ -52,7 +52,7 @@ const Navbar = () => {
             ].map((item, index) => (
               <li
                 key={index}
-                className="cursor-pointer hover:text-blue-500 py-5 md:py-0 mx-10 capitalize flex items-center transition-all"
+                className="cursor-pointer hover:text-blue-500 py-5 md:py-0 mx-8 capitalize flex items-center transition-all"
               >
                 <a
                   href={"#" + item.id}
@@ -76,7 +76,7 @@ const Navbar = () => {
                   </span>
                 </Button>
               </a>
-            </li> */}
+            </li>
             <li>
               {/* <div className="bg-red-100 flex items-center ml-3">
                 {darkMode && (
@@ -104,9 +104,9 @@ const Navbar = () => {
                     <MdOutlineDarkMode className="absolute h-[1.2rem] w-[1.2rem] transition-all" />
                   </Button>
                 )}
-              </div> */}
+              </div> 
             </li>
-            {/* <li
+            <li
               className="md:hidden p-2 cursor-pointer ml-2"
               onClick={() => setMenu(true)}
             >

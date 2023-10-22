@@ -52,7 +52,7 @@ const Navbar = () => {
             ].map((item, index) => (
               <li
                 key={index}
-                className="cursor-pointer hover:text-blue-500 py-5 md:py-0 mx-8 capitalize flex items-center transition-all"
+                className="cursor-pointer hover:text-blue-500 py-5 md:py-0 mx-7 capitalize flex items-center transition-all"
               >
                 <a
                   href={"#" + item.id}

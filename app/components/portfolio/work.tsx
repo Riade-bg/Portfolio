@@ -68,12 +68,12 @@ const Work = async () => {
       key={item.title}
     >
       <div
-        className="hidden relative md:block col-span-12 md:col-span-7
+        className="relative md:block col-span-12 md:col-span-7
         hover:before:bg-transparent before:transition before:h-full before:w-full before:content-[''] before:bg-blue-500/40 before:absolute before:z-10"
       >
         <img className="w-full" src={item.imageUrl} alt={item.title} />
       </div>
-      <style jsx>
+      {/* <style jsx>
         {`
         @media (max-width: 768px) {
             .on-the-fly-behavior:before {
@@ -93,9 +93,9 @@ const Work = async () => {
             }
           }
             `}
-      </style>
+      </style> */}
       <div
-        className={`on-the-fly-behavior h-[500px] md:h-full p-10 md:p-0 col-span-12 md:col-span-5 flex flex-col items-start md:items-end justify-center`}
+        className={`on-the-fly-behavior h-full p-5 col-span-12 md:col-span-5 flex flex-col items-start md:items-end justify-center`}
       >
         <h1 className="text-2xl mt-10 md:mt-0 font-mono font-bold">{item.title}</h1>
         <p className="text-start md:text-end my-5 text-base bg-white text-[#a8b2d1] dark:bg-[#0a192f] shadow-lg px-5 py-2 md:-ml-40 md:z-20">
